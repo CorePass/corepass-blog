@@ -201,58 +201,8 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Ecosystem',
-          items: [
-            {
-              label: 'Core Website',
-              href: 'https://coreblockchain.net',
-            },
-            {
-              label: 'Core Blog',
-              href: 'https://blog.coreblockchain.net',
-            },
-            {
-              label: 'Dev Portal',
-              href: 'https://dev.coreblockchain.net',
-            },
-            {
-              label: 'Blockindex',
-              href: 'https://blockindex.net',
-            },
-            {
-              label: 'Payto',
-              href: 'https://payto.money',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Core ◆ Talk',
-              href: 'https://coretalk.space',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/core-coin',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.com/invite/SCxmFr5Pwp',
-            },
-            {
-              label: 'Reddit',
-              href: 'https://www.reddit.com/r/CoreCoinCC',
-            },
-            {
-              label: '𝕏',
-              href: 'https://x.com/corecoincc',
-            },
-          ],
-        },
+      
       ],
-      copyright: `${process.env.org || 'Core Foundation'} ⛬ Copyright and related rights waived via CC0.`,
     },
     prism: {
       theme: prismThemes.github,
@@ -270,5 +220,7 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 };
+
+
 
 export default config;

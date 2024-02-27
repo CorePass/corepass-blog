@@ -77,6 +77,7 @@ export default function BlogPostItemHeaderAuthor({author, className}) {
               {title}
             </small>
           )}
+          
         </div>
       )}
     </div>
