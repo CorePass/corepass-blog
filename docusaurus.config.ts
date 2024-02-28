@@ -18,7 +18,7 @@ const config: Config = {
 
   customFields: {
     ican: 'cb57bbbb54cdf60fa666fd741be78f794d4608d67109',
-  },
+  },  
 
   organizationName: process.env.org || 'Core Foundation',
   projectName: 'corebc-blog',
@@ -152,6 +152,7 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
+    
     navbar: {
       title: 'Blog',
       logo: {
@@ -179,28 +180,44 @@ const config: Config = {
           type: 'localeDropdown',
           position: 'right',
         },
+        
       ],
+      
     },
     footer: {
-      style: 'dark',
+
+     
       links: [
-        {
-          title: 'Blog',
-          items: [
+       
             {
-              label: 'Latest articles',
+              label: 'About CorePass',
               to: '/',
+              className: 'nav-items'
+            },
+            
+            {
+              label: 'Features',
+              to: '/',
+              className: 'nav-items'
             },
             {
-              label: 'Tags',
-              to: '/tags',
+              label: 'Business',
+              to: '/',
+              className: 'nav-items'
             },
             {
-              label: 'Archive',
+              label: 'Ecosystem',
+              to: '/',
+              className: 'nav-items'
+            },
+            {
+              label: 'Contact',
               to: '/archive',
+              className: 'nav-items'
             },
-          ],
-        },
+          
+          
+        
       
       ],
     },

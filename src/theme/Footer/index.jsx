@@ -16,30 +16,27 @@ import {
   Linkedin_Link,
   X_Link,
   YouTube_Link,
-  ROUTENAMES,
+ 
 } from "../../constants";
 
 
-
-import Footer from '@theme-original/Footer';
-
+import { useThemeConfig } from "@docusaurus/theme-common";
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-export default function FooterWrapper({ sectionRef }) {
+export default function FooterWrapper( ) {
   const { setType } = useContext(CustomCursorContext);
 
+ 
+
+  const { footer } = useThemeConfig();
+  const { links } = footer
+
+  let navigationItems = [];
+
+  links.map((props) => (
+    navigationItems.push({name: props.label})    
+   
+))
 
   return (
     
@@ -55,9 +52,7 @@ export default function FooterWrapper({ sectionRef }) {
           onMouseLeave={() => {
             setType("");
           }}
-          onClick={() => {
-            executeScroll({ name: "Hero" });
-          }}
+         
           
           
           />
@@ -65,7 +60,7 @@ export default function FooterWrapper({ sectionRef }) {
         
          
 
-         <FooterNavigation />
+         <FooterNavigation navigationItems={navigationItems} />
 
          
 
@@ -119,20 +114,16 @@ export default function FooterWrapper({ sectionRef }) {
         </div>
         
         <div className="policy-condition-wrapper">
-          {/* <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={Privacy_Policy_Link}
-          > */}
+        
           <CTypography
             weight="bold"
             color="var(--River-bed)"
             className="footer-text hoverable"
            
           >
-            <a target="\_blank" href={require('../../privacy-policy/index').default}> Privacy policy </a>
+           Privacy policy 
           </CTypography>
-          {/* </a> */}
+        
           <div className="vertical-line"></div>
           {/* <a
             target="_blank"

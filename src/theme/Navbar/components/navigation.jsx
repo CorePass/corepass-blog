@@ -1,14 +1,19 @@
 import { useContext, useState } from "react";
-import CTypography from "@site/src/components/typography";
-import { FooterNavigationStyled } from "./footer-nav-styled";
-import {CustomCursorContext } from "@site/src/contexts/cursor";
+import CTypography from '@site/src/components/typography';
+import { NavigationStyled } from "./navigation-styled";
+import { CustomCursorContext } from "@site/src/contexts/cursor";
 
-
-
-export const FooterNavigation = ({navigationItems }) => {
-  const { setType } = useContext(CustomCursorContext);
+export const Navigation = ({ executeScroll }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
- 
+  const { setType } = useContext(CustomCursorContext);
+  const navigationItems = [
+    { name: "About CorePass" },
+    { name: "Features" },
+    { name: "Business" },
+    { name: "Ecosystem" },
+    { name: "Contact" },
+  ];
+
   const navigationItemsDisplay = navigationItems?.map?.(({ name }) => {
     return (
       <CTypography
@@ -18,7 +23,7 @@ export const FooterNavigation = ({navigationItems }) => {
         className="nav-items"
         key={name}
         id={name}
-       
+        onClick={() => executeScroll({ name: name })}
         onMouseEnter={(e) => {
           setHoveredItem(e.target.id);
           setType("hover");
@@ -33,8 +38,8 @@ export const FooterNavigation = ({navigationItems }) => {
     );
   });
   return (
-    <FooterNavigationStyled hoveredItem={hoveredItem}>
+    <NavigationStyled hoveredItem={hoveredItem}>
       {navigationItemsDisplay}
-    </FooterNavigationStyled>
+    </NavigationStyled>
   );
 };

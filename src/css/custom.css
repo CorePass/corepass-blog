@@ -36,7 +36,10 @@
 }
 
 .footer {
-  background-color: #18181F;
+  color: "var(--River-bed)";
+  size : "small";
+  font-weight : "bold";
+  background-color: 'transparent'
 }
 
 a.header-github-link {
@@ -57,4 +60,6 @@ html[data-theme='dark'] a.header-github-link {
 a.header-github-link > svg {
   display: none;
 }
+
+
 
