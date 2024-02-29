@@ -12,6 +12,15 @@
   --ifm-code-font-size: 90%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-font-family-base: "Red Hat Display", "Open Sans", Helvetica, Arial, sans-serif;
+  --White: #fff;
+  --White-10: rgba(16, 102, 223, 0);
+  --River-bed: #4b5563;
+  --Grey: #686e84;
+  --Black: #000;
+  --Blue: #1066df;
+  --Light-blue: #10badf;
+  --Solitude: #ebeef4;
+  --Alice-Blue: #f5f7fa;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

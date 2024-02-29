@@ -137,7 +137,7 @@ export const GradientFontStyle = css`
   background: -webkit-linear-gradient(0deg, var(--Blue), var(--Light-blue));
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+ -webkit-text-fill-color: transparent;
   clip-path: inset(1px);
 `;
 
