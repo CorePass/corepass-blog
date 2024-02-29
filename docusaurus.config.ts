@@ -154,31 +154,41 @@ const config: Config = {
     },
     
     navbar: {
-      title: 'Blog',
-      logo: {
-        alt: 'Blog',
-        src: 'img/logo.svg',
-      },
+     
       items: [
         {
-          to: '/tags',
-          label: 'Tags',
-          position: 'left'
+          label: 'About Corepass',
+          to: '/',
+          className: 'nav-items'
+         
+          
         },
         {
-          to: '/archive',
-          label: 'Archive',
-          position: 'left'
+          label: 'Features',
+          to: '/',
+          className: 'nav-items'
+         
+         
         },
         {
-          href: 'https://github.com/core-coin',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
+          label: 'Business',
+          to: '/',
+          className: 'nav-items'
         },
         {
-          type: 'localeDropdown',
-          position: 'right',
+          label: 'Ecosystem',
+          to: '/',
+          className: 'nav-items'
+        },
+        {
+          label: 'Blog',
+          to: '/',
+          className: 'nav-items'
+        },
+        {
+          label: 'Contact',
+          to: '/',
+          className: 'nav-items'
         },
         
       ],

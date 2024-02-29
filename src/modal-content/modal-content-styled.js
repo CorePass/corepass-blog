@@ -7,15 +7,15 @@ import {
   ROW_ALIGN_START__SPACE_B,
   ROW_CENTER,
   ROW_JUSTIFY_START__ALIGN_CENTER,
-} from "../../styles/global-styles";
+} from "../styles/global-styles";
 
 import {
   TEXT_11,
   TEXT_40,
   TEXT_56,
   TEXT_64,
-} from "../../styles/globalTypography";
-import { breakpoints } from "../../styles/media-queries";
+} from "../styles/globalTypography";
+import { breakpoints } from "../styles/media-queries";
 
 export const ModalContentStyled = styled("section")`
   background-color: var(--White);

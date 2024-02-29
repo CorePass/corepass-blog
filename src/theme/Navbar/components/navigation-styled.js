@@ -24,7 +24,7 @@ export const NavigationStyled = styled("nav")`
     }
   }
   gap: 56px;
-  width: 649px;
+  // width: 649px;
   min-width: 649px;
   @media (max-width: ${breakpoints.lg}px) {
     display: none;

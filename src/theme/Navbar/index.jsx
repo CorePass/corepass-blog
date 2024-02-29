@@ -2,16 +2,22 @@ import React from 'react';
 import CTypography from '@site/src/components/typography';
 import { Navigation } from "./components/navigation";
 import { HeaderStyled, HideAbleBaseButton } from "./styled-header";
-import hamburgerMenu from "../../assets/icons/hamburger-menu.svg";
+import HamburgerMenu from "../../assets/icons/hamburger-menu.svg";
 import { ModalContext } from "@site/src/contexts/modal";
 import { useContext, useEffect, useRef } from "react";
-import useScrollingUp from "../../hooks/use-scrolling-up";
+// import useScrollingUp from "../../hooks/use-scrolling-up";
 import LogoIcon from "../../assets/icons/Logo-header.svg";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
 import { useLocation } from "react-router-dom";
 // import { scrollToSection } from "./utils/scroll-section";
 import { flushSync } from "react-dom";
 import { ROUTENAMES } from "../../constants";
+
+import { useThemeConfig } from "@docusaurus/theme-common";
+
+
+
+
 
 
 export default function NavbarWrapper(sectionRef,
@@ -55,21 +61,44 @@ export default function NavbarWrapper(sectionRef,
     //   };
       // eslint-disable-next-line
     // }, [sectionRef]);
+
+
+    const { navbar } = useThemeConfig();
+    const { items } = navbar
+
+    let navigationItems = [];
+
+  items.map((props) => (
+    navigationItems.push({name: props.label})    
+   
+))
+
+
+    // const navigationItems = [
+    //   { name: "About" },
+    //   { name: "Features" },
+    //   { name: "Business" },
+    //   { name: "Ecosystem" },
+    //   { name: "Contact" },
+    // ];
+
+
+
+
   return (
     
       <HeaderStyled
-        scrollingUp={scrollingUp}
-        screenBegining={screenBegining}
-        containerVisibility={containerVisibility}
+        // scrollingUp={scrollingUp}
+        // screenBegining={screenBegining}
+        // containerVisibility={containerVisibility}
         // hideHeader={hideHeader.current}
       >
-        <img
-          src={LogoIcon}
+        <LogoIcon
           alt="Logo"
           className="logo-header header-entrance-anime"
-          onClick={() => {
-            executeScroll({ name: "Hero" });
-          }}
+          // onClick={() => {
+          //   executeScroll({ name: "Hero" });
+          // }}
           onMouseEnter={() => {
             setType("hover");
           }}
@@ -78,7 +107,8 @@ export default function NavbarWrapper(sectionRef,
           }}
         />
         <Navigation
-          executeScroll={executeScroll}
+        navigationItems={navigationItems} 
+          // executeScroll={executeScroll}
           className="header-entrance-anime"
         />
         <div
@@ -108,8 +138,7 @@ export default function NavbarWrapper(sectionRef,
               </CTypography>
             </HideAbleBaseButton>
           </div>
-          <img
-            src={hamburgerMenu}
+         <HamburgerMenu
             alt="hamburger-menu"
             className="hamburger-menu"
             onClick={() => {

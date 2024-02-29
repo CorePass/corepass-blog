@@ -3,16 +3,10 @@ import CTypography from '@site/src/components/typography';
 import { NavigationStyled } from "./navigation-styled";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
 
-export const Navigation = ({ executeScroll }) => {
+export const Navigation = ({ navigationItems }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const { setType } = useContext(CustomCursorContext);
-  const navigationItems = [
-    { name: "About CorePass" },
-    { name: "Features" },
-    { name: "Business" },
-    { name: "Ecosystem" },
-    { name: "Contact" },
-  ];
+  
 
   const navigationItemsDisplay = navigationItems?.map?.(({ name }) => {
     return (
@@ -23,7 +17,6 @@ export const Navigation = ({ executeScroll }) => {
         className="nav-items"
         key={name}
         id={name}
-        onClick={() => executeScroll({ name: name })}
         onMouseEnter={(e) => {
           setHoveredItem(e.target.id);
           setType("hover");

@@ -1,5 +1,5 @@
 import { styled } from "@mui/material";
-import { CBaseButton } from "./base";
+import { CBaseButton } from "../base";
 
 export const GradientButtonStyled = styled(CBaseButton)`
   width: ${(props) => [props.width]};

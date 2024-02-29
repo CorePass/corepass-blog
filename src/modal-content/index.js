@@ -1,15 +1,15 @@
-import CTypography from "../../componets/typography";
+import CTypography from "../components/typography";
 import { ModalContentStyled } from "./modal-content-styled";
-import DownloadIcon from "../../assets/icons/donwload-double-cell.png";
-import closeButton from "../../assets/icons/close-btn.svg";
-import closeMobileButton from "../../assets/icons/x-close.svg";
-import corepassModalLogo from "../../assets/icons/corepass-logo-with-name.svg";
+import DownloadIcon from "../assets/icons/donwload-double-cell.png";
+import closeButton from "../assets/icons/close-btn.svg";
+import closeMobileButton from "../assets/icons/x-close.svg";
+import corepassModalLogo from "../assets/icons/corepass-logo-with-name.svg";
 import { useContext } from "react";
-import { ModalContext } from "../../contexts/modal";
-import { CGradientButton } from "../../componets/button/gradient";
-import { CustomCursorContext } from "../../contexts/cursor";
-import { GooglePlayButton } from "../../componets/button/google-play";
-import { AppStoreButton } from "../../componets/button/apple-store";
+import { ModalContext } from "../contexts/modal";
+import { CGradientButton } from "../components/button/gradient";
+import { CustomCursorContext } from "../contexts/cursor";
+import { GooglePlayButton } from "../components/button/google-play";
+import { AppStoreButton } from "../components/button/apple-store";
 
 export const ModalContent = () => {
   let { setIsOpen } = useContext(ModalContext);
