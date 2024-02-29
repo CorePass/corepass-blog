@@ -5,8 +5,7 @@ import { ModalContent } from "@site/src/modal-content";
 let ModalContext;
 let { Provider } = (ModalContext = React.createContext());
 
-let ModalProvider = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+let ModalProvider = ({ children, isOpen, setIsOpen }) => {
   return (
     <Provider value={{ isOpen, setIsOpen }}>
       <CModal
@@ -15,7 +14,7 @@ let ModalProvider = ({ children }) => {
           setIsOpen((prev) => !prev);
         }}
       >
-        <ModalContent />
+        <ModalContent setIsOpen={setIsOpen} />
       </CModal>
       {children}
     </Provider>

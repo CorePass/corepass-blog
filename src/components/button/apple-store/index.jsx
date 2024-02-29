@@ -8,7 +8,7 @@ export const AppStoreButton = ({ ...props }) => {
   return (
     <a target="_blank" rel="noopener noreferrer" href={App_Store_Link}>
       <StyledAppStore
-        src={AppStoreIcon}
+        src=<AppStoreIcon/>
         onMouseEnter={() => {
           setType("hover");
         }}

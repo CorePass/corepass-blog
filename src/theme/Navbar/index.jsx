@@ -4,7 +4,7 @@ import { Navigation } from "./components/navigation";
 import { HeaderStyled, HideAbleBaseButton } from "./styled-header";
 import HamburgerMenu from "../../assets/icons/hamburger-menu.svg";
 import { ModalContext } from "@site/src/contexts/modal";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 // import useScrollingUp from "../../hooks/use-scrolling-up";
 import LogoIcon from "../../assets/icons/Logo-header.svg";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
@@ -12,6 +12,8 @@ import { useLocation } from "react-router-dom";
 // import { scrollToSection } from "./utils/scroll-section";
 import { flushSync } from "react-dom";
 import { ROUTENAMES } from "../../constants";
+import { CustomDrawer } from '@site/src/components/drawer';
+import { ModalProvider } from '@site/src/contexts/modal';
 
 import { useThemeConfig } from "@docusaurus/theme-common";
 
@@ -21,12 +23,15 @@ import { useThemeConfig } from "@docusaurus/theme-common";
 
 
 export default function NavbarWrapper(sectionRef,
-  setToggleDrawer,
+  
   containerVisibility,) {
     // let { setIsOpen } = useContext(ModalContext);
+    const [isOpen, setIsOpen] = useState(false);
+
     // const { scrollingUp, screenBegining } = useScrollingUp();
     const { setType } = useContext(CustomCursorContext);
     const { pathname } = useLocation();
+    const [toggleDrawer, setToggleDrawer] = useState(false);
     // const navigate = useNavigate();
   
     // const executeScroll = ({ name }) => {
@@ -74,17 +79,6 @@ export default function NavbarWrapper(sectionRef,
 ))
 
 
-    // const navigationItems = [
-    //   { name: "About" },
-    //   { name: "Features" },
-    //   { name: "Business" },
-    //   { name: "Ecosystem" },
-    //   { name: "Contact" },
-    // ];
-
-
-
-
   return (
     
       <HeaderStyled
@@ -93,6 +87,7 @@ export default function NavbarWrapper(sectionRef,
         // containerVisibility={containerVisibility}
         // hideHeader={hideHeader.current}
       >
+        <ModalProvider isOpen={isOpen} setIsOpen={setIsOpen}></ModalProvider>
         <LogoIcon
           alt="Logo"
           className="logo-header header-entrance-anime"
@@ -143,6 +138,7 @@ export default function NavbarWrapper(sectionRef,
             className="hamburger-menu"
             onClick={() => {
               setToggleDrawer(true);
+              console.log(toggleDrawer)
             }}
             onMouseEnter={() => {
               setType("hover");
@@ -152,6 +148,19 @@ export default function NavbarWrapper(sectionRef,
             }}
           />
         </div>
+        <CustomDrawer
+                toggleDrawer={toggleDrawer}
+                setToggleDrawer={setToggleDrawer}
+                sectionRef={sectionRef}
+                navigationItems={navigationItems}
+              >
+                <div
+                  onClick={() => {
+                    setToggleDrawer(false);
+                  }}
+                ></div>
+              </CustomDrawer>
+
       </HeaderStyled>
     );
   };

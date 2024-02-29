@@ -1,7 +1,7 @@
 import CTypography from "../components/typography";
 import { ModalContentStyled } from "./modal-content-styled";
 import DownloadIcon from "../assets/icons/donwload-double-cell.png";
-import closeButton from "../assets/icons/close-btn.svg";
+import CloseButton from "../assets/icons/close-btn.svg";
 import closeMobileButton from "../assets/icons/x-close.svg";
 import corepassModalLogo from "../assets/icons/corepass-logo-with-name.svg";
 import { useContext } from "react";
@@ -75,8 +75,7 @@ export const ModalContent = () => {
           />
         </div>
       </div>
-      <img
-        src={closeButton}
+      <CloseButton
         alt="closeButton"
         className="close-button"
         onClick={() => {
