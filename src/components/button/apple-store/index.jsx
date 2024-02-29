@@ -7,16 +7,17 @@ export const AppStoreButton = ({ ...props }) => {
   const { setType } = useContext(CustomCursorContext);
   return (
     <a target="_blank" rel="noopener noreferrer" href={App_Store_Link}>
-      <StyledAppStore
-        src=<AppStoreIcon/>
+     
+      <AppStoreIcon
+       
         onMouseEnter={() => {
           setType("hover");
         }}
         onMouseLeave={() => {
           setType("");
         }}
-        {...props}
-      ></StyledAppStore>
+     
+     />
     </a>
   );
 };

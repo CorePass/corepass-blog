@@ -3,7 +3,7 @@ import { ModalContentStyled } from "./modal-content-styled";
 import DownloadIcon from "../assets/icons/donwload-double-cell.png";
 import CloseButton from "../assets/icons/close-btn.svg";
 import closeMobileButton from "../assets/icons/x-close.svg";
-import corepassModalLogo from "../assets/icons/corepass-logo-with-name.svg";
+import CorepassModalLogo from "../assets/icons/corepass-logo-with-name.svg";
 import { useContext } from "react";
 import { ModalContext } from "../contexts/modal";
 import { CGradientButton } from "../components/button/gradient";
@@ -18,7 +18,7 @@ export const ModalContent = () => {
     <ModalContentStyled>
       <div className="content">
         <div className="tablet-header">
-          <img src={corepassModalLogo} alt="corepassModalLogo" />
+          <CorepassModalLogo alt="corepassModalLogo" />
           <img
             src={closeMobileButton}
             alt="closeMobileButton"
@@ -88,8 +88,7 @@ export const ModalContent = () => {
           setType("");
         }}
       />
-      <img
-        src={corepassModalLogo}
+     <CorepassModalLogo
         alt="corepassModalLogo"
         className="corepass-modal-logo"
       />
