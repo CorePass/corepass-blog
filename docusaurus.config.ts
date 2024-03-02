@@ -154,7 +154,7 @@ const config: Config = {
     },
     
     navbar: {
-     
+      hideOnScroll: true,
       items: [
         {
           label: 'About Corepass',
@@ -165,7 +165,7 @@ const config: Config = {
         },
         {
           label: 'Features',
-          to: '/',
+          to: '/core-nodes',
           className: 'nav-items'
          
          

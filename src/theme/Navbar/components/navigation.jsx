@@ -2,13 +2,14 @@ import { useContext, useState } from "react";
 import CTypography from '@site/src/components/typography';
 import { NavigationStyled } from "./navigation-styled";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
+import { Link } from "react-router-dom";
 
 export const Navigation = ({ navigationItems }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const { setType } = useContext(CustomCursorContext);
   
 
-  const navigationItemsDisplay = navigationItems?.map?.(({ name }) => {
+  const navigationItemsDisplay = navigationItems?.map?.(({ name, link }) => {
     return (
       <CTypography
         color="var(--River-bed)"
@@ -25,8 +26,11 @@ export const Navigation = ({ navigationItems }) => {
           setHoveredItem(null);
           setType("");
         }}
+       
+
       >
-        {name}
+       
+        <Link to = {link} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{name}</Link>
       </CTypography>
     );
   });

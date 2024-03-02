@@ -4,11 +4,11 @@ import { Navigation } from "./components/navigation";
 import { HeaderStyled, HideAbleBaseButton } from "./styled-header";
 import HamburgerMenu from "../../assets/icons/hamburger-menu.svg";
 import { ModalContext } from "@site/src/contexts/modal";
-import { useContext, useEffect, useRef, useState } from "react";
-// import useScrollingUp from "../../hooks/use-scrolling-up";
+import { useContext, useEffect, useRef, useState, useNavigate } from "react";
+import useScrollingUp from "../../hooks/use-scrolling-up";
 import LogoIcon from "../../assets/icons/Logo-header.svg";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 // import { scrollToSection } from "./utils/scroll-section";
 import { flushSync } from "react-dom";
 import { ROUTENAMES } from "../../constants";
@@ -16,6 +16,8 @@ import { CustomDrawer } from '@site/src/components/drawer';
 import { ModalProvider } from '@site/src/contexts/modal';
 
 import { useThemeConfig } from "@docusaurus/theme-common";
+import {useLocation} from '@docusaurus/router';
+
 
 
 
@@ -48,7 +50,7 @@ export default function NavbarWrapper(sectionRef,
     // useEffect(() => {
     //   const handleScroll = () => {
     //     if (pathname === ROUTENAMES.RootPage) {
-    //       const goalComponent = sectionRef.current.AboutCorePass;
+    //       const goalComponent = location.pathname;
     //       const distanceToTop = goalComponent?.getBoundingClientRect()?.top;
     //       distanceToTop < 0
     //         ? (hideHeader.current = true)
@@ -64,20 +66,22 @@ export default function NavbarWrapper(sectionRef,
     //   return () => {
     //     window.removeEventListener("scroll", handleScroll);
     //   };
-      // eslint-disable-next-line
+    //   eslint-disable-next-line
     // }, [sectionRef]);
 
 
     const { navbar } = useThemeConfig();
     const { items } = navbar
+    const {hideOnScroll} = navbar
 
     let navigationItems = [];
 
   items.map((props) => (
-    navigationItems.push({name: props.label})    
+    navigationItems.push({name: props.label, link: props.to})    
    
 ))
 
+// console.log(navigationItems)
 
   return (
     
@@ -103,6 +107,7 @@ export default function NavbarWrapper(sectionRef,
         />
         <Navigation
         navigationItems={navigationItems} 
+
           // executeScroll={executeScroll}
           className="header-entrance-anime"
         />
