@@ -1,5 +1,4 @@
 import CTypography from "@site/src/components/typography";
-
 import LinkedinIcon from "../../assets/icons/iconsLinkedin.svg";
 import InstagramIcon from "../../assets/icons/iconsInstagram.svg";
 import XIcon from "../../assets/icons/xIcon.svg";
@@ -18,32 +17,26 @@ import {
   YouTube_Link,
  
 } from "../../constants";
-
-
 import { useThemeConfig } from "@docusaurus/theme-common";
+
+
+
 
 
 export default function FooterWrapper( ) {
   const { setType } = useContext(CustomCursorContext);
-
- 
-
   const { footer } = useThemeConfig();
   const { links } = footer
 
   let navigationItems = [];
 
   links.map((props) => (
-    navigationItems.push({name: props.label})    
+    navigationItems.push({name: props.label, link: props.to})    
    
 ))
-
-
-
   return (
     
-    
-    <FooterStyled>
+  <FooterStyled>
        <div className="upper-section">
      
 
@@ -54,15 +47,12 @@ export default function FooterWrapper( ) {
           onMouseLeave={() => {
             setType("");
           }}
-         
-          
-          
-          />
+      />
          
         
          
 
-         <FooterNavigation navigationItems={navigationItems} />
+    <FooterNavigation navigationItems={navigationItems} />
 
          
 
@@ -145,9 +135,6 @@ export default function FooterWrapper( ) {
       </div>
       
       
-      </FooterStyled>
-  
-  
-    
-  );
+ </FooterStyled>
+   );
 }

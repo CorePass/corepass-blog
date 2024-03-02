@@ -14,7 +14,6 @@ import YoutubeIcon from "../../assets/icons/youtubeIcon.svg";
 import FacebookIcon from "../../assets/icons/facebookIcon.svg";
 import CTypography from "../typography";
 import { CustomCursorContext } from "../../contexts/cursor";
-import { useWindowSize } from "../../contexts/screen-size";
 import {
   Facebook_Link,
   Instagram_Link,
@@ -23,36 +22,29 @@ import {
   X_Link,
   YouTube_Link,
 } from "../../constants";
-// import { scrollToSection } from "../../containers/header/utils/scroll-section";
 import { useLocation, useNavigate } from "react-router-dom";
-import { flushSync } from "react-dom";
+import { Link } from "react-router-dom";
+
+
+
+
+
 export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, navigationItems }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const { setType } = useContext(CustomCursorContext);
   const { pathname } = useLocation();
-  // const { windowWidth } = useWindowSize();
-  // const navigate = useNavigate();
+
 
   const onCloseHandler = () => {
     setToggleDrawer(false);
   };
-  // const executeScroll = ({ name }) => {
-  //   if (pathname !== ROUTENAMES.RootPage) {
-  //     flushSync(() => {
-  //       navigate(ROUTENAMES.RootPage, { state: { name } });
-  //     });
-  //   } else {
-  //     scrollToSection(sectionRef, name, windowWidth);
-  //   }
-  // };
  
-
   const logoClickHandler = () => {
     setToggleDrawer(false);
     // executeScroll({ name: "Hero" });
   };
 
-  const navigationItemsDisplay = navigationItems?.map?.(({ name }) => {
+  const navigationItemsDisplay = navigationItems?.map?.(({ name, link }) => {
     return (
       <CTypography
         color="var(--River-bed)"
@@ -74,7 +66,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           setType("");
         }}
       >
-        {name}
+        <Link to = {link} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{name}</Link>
       </CTypography>
     );
   });

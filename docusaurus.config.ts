@@ -207,7 +207,7 @@ const config: Config = {
             
             {
               label: 'Features',
-              to: '/',
+              to: '/core-nodes',
               className: 'nav-items'
             },
             {
