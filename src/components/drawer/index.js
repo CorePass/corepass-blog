@@ -44,15 +44,15 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
     // executeScroll({ name: "Hero" });
   };
 
-  const navigationItemsDisplay = navigationItems?.map?.(({ name, link }) => {
+  const navigationItemsDisplay = navigationItems?.map?.(( item, index ) => {
     return (
       <CTypography
         color="var(--River-bed)"
         size="small"
         weight="medium"
         className="nav-items"
-        key={name}
-        id={name}
+        key={index}
+        id={index}
         onClick={() => {
           setToggleDrawer(false);
           // executeScroll({ name: name });
@@ -66,7 +66,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           setType("");
         }}
       >
-        <Link to = {link} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{name}</Link>
+        <a href={item.href || item.to} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{item.label}</a>
       </CTypography>
     );
   });

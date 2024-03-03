@@ -158,7 +158,7 @@ const config: Config = {
       items: [
         {
           label: 'About Corepass',
-          to: '/',
+          href: 'https://docusaurus.io/docs/configuration',
           className: 'nav-items'
          
           
@@ -201,7 +201,7 @@ const config: Config = {
        
             {
               label: 'About CorePass',
-              to: '/',
+              href:"https://docusaurus.io/docs/configuration",
               className: 'nav-items'
             },
             

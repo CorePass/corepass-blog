@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import CTypography from "@site/src/components/typography";
 import { FooterNavigationStyled } from "./footer-nav-styled";
 import {CustomCursorContext } from "@site/src/contexts/cursor";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 
@@ -11,15 +11,15 @@ export const FooterNavigation = ({navigationItems }) => {
   const { setType } = useContext(CustomCursorContext);
   const [hoveredItem, setHoveredItem] = useState(null);
  
-  const navigationItemsDisplay = navigationItems?.map?.(({ name, link }) => {
+  const navigationItemsDisplay = navigationItems?.map?.(( item, index) => {
     return (
       <CTypography
         color="var(--River-bed)"
         size="small"
         weight="bold"
         className="nav-items"
-        key={name}
-        id={name}
+        key={index}
+        id={index}
        
         onMouseEnter={(e) => {
           setHoveredItem(e.target.id);
@@ -30,8 +30,8 @@ export const FooterNavigation = ({navigationItems }) => {
           setType("");
         }}
       >
-         <Link to = {link} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{name}</Link>
-
+         <a href={item.href || item.to} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{item.label}</a>
+       
       </CTypography>
     );
   });

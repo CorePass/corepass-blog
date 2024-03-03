@@ -25,15 +25,9 @@ import { useThemeConfig } from "@docusaurus/theme-common";
 
 export default function FooterWrapper( ) {
   const { setType } = useContext(CustomCursorContext);
-  const { footer } = useThemeConfig();
-  const { links } = footer
+  const { links } = useThemeConfig().footer
 
-  let navigationItems = [];
 
-  links.map((props) => (
-    navigationItems.push({name: props.label, link: props.to})    
-   
-))
   return (
     
   <FooterStyled>
@@ -52,7 +46,7 @@ export default function FooterWrapper( ) {
         
          
 
-    <FooterNavigation navigationItems={navigationItems} />
+    <FooterNavigation navigationItems={links} />
 
          
 
