@@ -3,18 +3,22 @@ import CTypography from "@site/src/components/typography";
 import { Navigation } from "./components/navigation";
 import { HeaderStyled, HideAbleBaseButton } from "./styled-header";
 import HamburgerMenu from "../../assets/icons/hamburger-menu.svg";
-import { useContext, useState } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import LogoIcon from "../../assets/icons/Logo-header.svg";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
 import { CustomDrawer } from "@site/src/components/drawer";
 import { ModalProvider } from "@site/src/contexts/modal";
 import { useThemeConfig } from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { ROUTENAMES } from "../../constants";
+import { useLocation } from "react-router-dom";
 
 export default function NavbarWrapper(sectionRef) {
   const [isOpen, setIsOpen] = useState(false);
   const { setType } = useContext(CustomCursorContext);
   const [toggleDrawer, setToggleDrawer] = useState(false);
+  const hideHeader = useRef(false);
+  const { pathname } = useLocation();
 
   const { items } = useThemeConfig().navbar;
 
@@ -22,31 +26,18 @@ export default function NavbarWrapper(sectionRef) {
 
   const title = siteConfig.title;
 
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    let navbar = document.getElementById("navbar");
-
-    if (!navbar) {
-      console.log(99);
-    } else {
-      console.log(111111);
-    }
-
-    let ll = navbar.getBoundingClientRect();
-    if (!ll) {
-      console.log(11);
-    } else {
-      console.log(ll.top);
-    }
-
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
-      document.getElementById("navbar").style.top = "-50px";
-    }
-    prevScrollpos = currentScrollPos;
-  };
+  (function hideOnScroll() {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      let currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-150px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  })();
 
   return (
     <HeaderStyled id="navbar">

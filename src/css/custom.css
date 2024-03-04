@@ -70,5 +70,8 @@ a.header-github-link > svg {
   display: none;
 }
 
+.margin-bottom--xl{
+  display: flex;
+}
 
 
