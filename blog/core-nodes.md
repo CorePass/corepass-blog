@@ -13,6 +13,7 @@ tags:
   - guide
 image: /img/blog/nodes-and-their-role.png
 ---
+
 ![Nodes and Their Role](/img/blog/core-nodes-nodes-and-their-role.png "Nodes and Their Role")
 
 In the dynamic realm of distributed ledger technology, nodes are the silent architects shaping the decentralized landscape of a blockchain. Understanding the intricacies of these nodes is not merely a technical nuance but a key to clarifying the very essence of blockchain's sustainability, resilience and transparency.
@@ -61,7 +62,7 @@ For a better mining experience, we recommend connecting your computational facil
 
 A mining pool is a special 3rd party software similar to a supercomputer that is installed on a set of servers, a mining pool is connected to the special upstream node which creates a block that should be mined, receives the resulting nonce from the pool, and seals this block.
 
-On the flip side, the pool welcomes connections from miners using the stratum protocol and distributes the computational workload among them. Pools handle accounting for the hashrate and individual miner efforts, ensuring proper rewards are assigned and paid out regularly, in the case of Catch That Rabbit  every 4 hours.
+On the flip side, the pool welcomes connections from miners using the stratum protocol and distributes the computational workload among them. Pools handle accounting for the hashrate and individual miner efforts, ensuring proper rewards are assigned and paid out regularly, in the case of Catch That Rabbit every 4 hours.
 
 > Nodes, pools, and client interactions
 
@@ -87,11 +88,11 @@ On the flip side, the pool welcomes connections from miners using the stratum pr
 
 ### Tips, Linux Command
 
-- You can use screen Linux command to run Go-core client in the  background.
+- You can use screen Linux command to run Go-core client in the background.
 - You can setup system service to run Go-core as a daemon on Ubuntu.
 - Go-core client has command line options compatible with the command line options of Geth Ethereum client.
 - Console commands and features are compatible with Geth software with one exception: `eth` namespace was changed to `xcb`. For example, to check the balance you could use the `xcb.getBalance` command instead of `eth.getBalance` in Geth.
-Reference for using [the interactive console](https://geth.ethereum.org/docs/interacting-with-geth/javascript-console).
+  Reference for using [the interactive console](https://geth.ethereum.org/docs/interacting-with-geth/javascript-console).
 
 ## Collectively as a Community
 

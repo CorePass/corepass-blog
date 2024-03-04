@@ -70,3 +70,36 @@ a.header-github-link > svg {
   display: none;
 }
 
+.firstBlogPost{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.secondBlogPost{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+}
+
+.markdown{
+  padding: 10px;
+  flex: 1 0 70%;
+}
+
+
+.row .docusaurus-mt-lg{
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;;
+}
+
+.col .text--right .col--3{
+  padding: 10px 0;
+}
+
+.text--right > a {
+  width: 100px;
+  display: block;
+}
+
