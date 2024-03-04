@@ -48,7 +48,7 @@ const TypographyStyled = styled(Typography)(
     //     lineHeight: "47px",
     //   }),
     // }),
-  })
+  }),
 );
 
 export default TypographyStyled;

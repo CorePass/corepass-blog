@@ -14,6 +14,7 @@ tags:
   - dao
 image: /img/blog/charting-the-future.png
 ---
+
 ![Charting the Future](/img/blog/charting-the-future.png "Charting the Future")
 
 In the spirit of transparency pivotal for any blockchain technology, it is of utmost importance to be familiar with the genesis block and where the assets sprouting from it are allocated.
@@ -39,8 +40,8 @@ In summary, the genesis block is not only a technical starting point for a block
 The genesis allocation of Core Blockchain was minted on 6.5.2022 at 10:34 UTC. The assets originating from this allocation have been distributed to the following wallets in the following quantities:
 
 - [cb062b0d7e13b47c40350d2bb77940084737deaab755](https://blockindex.net/address/cb062b0d7e13b47c40350d2bb77940084737deaab755) - 108,000,000 XCB
-- [cb9485e8523dffd750102cd03c228768e30028d8f503](https://blockindex.net/address/cb9485e8523dffd750102cd03c228768e30028d8f503) -  69,000,000 XCB
-- [cb357d2b2a6c1d6f4169f3b618f953ea9e2371a9d8b2](https://blockindex.net/address/cb357d2b2a6c1d6f4169f3b618f953ea9e2371a9d8b2) -  30,000,000 XCB
+- [cb9485e8523dffd750102cd03c228768e30028d8f503](https://blockindex.net/address/cb9485e8523dffd750102cd03c228768e30028d8f503) - 69,000,000 XCB
+- [cb357d2b2a6c1d6f4169f3b618f953ea9e2371a9d8b2](https://blockindex.net/address/cb357d2b2a6c1d6f4169f3b618f953ea9e2371a9d8b2) - 30,000,000 XCB
 - [cb89e8496e3aab9b4dee805c92c5db86053780c013eb](https://blockindex.net/address/cb89e8496e3aab9b4dee805c92c5db86053780c013eb) - 30,000,000 XCB
 - [cb9516eb8a65b760d9d626ebdc33c222fe6b5e8b70e0](https://blockindex.net/address/cb9516eb8a65b760d9d626ebdc33c222fe6b5e8b70e0) - 30,000,000 XCB
 - [cb555aa34251ab3437359b0ca65fdd55f6758558aca1](https://blockindex.net/address/cb555aa34251ab3437359b0ca65fdd55f6758558aca1) - 27,000,000 XCB

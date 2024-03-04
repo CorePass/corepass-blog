@@ -2,7 +2,6 @@ import { css, styled } from "@mui/material";
 import { ROW_ALIGN_CENTER__SPACE_B } from "../../../styles/global-styles.js";
 import { breakpoints } from "../../../styles/media-queries.js";
 
-
 export const FooterNavigationStyled = styled("nav")`
   ${ROW_ALIGN_CENTER__SPACE_B};
   gap: 56px;

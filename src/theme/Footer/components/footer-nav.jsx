@@ -1,17 +1,14 @@
 import { useContext, useState } from "react";
 import CTypography from "@site/src/components/typography";
 import { FooterNavigationStyled } from "./footer-nav-styled";
-import {CustomCursorContext } from "@site/src/contexts/cursor";
+import { CustomCursorContext } from "@site/src/contexts/cursor";
 // import { Link } from "react-router-dom";
 
-
-
-
-export const FooterNavigation = ({navigationItems }) => {
+export const FooterNavigation = ({ navigationItems }) => {
   const { setType } = useContext(CustomCursorContext);
   const [hoveredItem, setHoveredItem] = useState(null);
- 
-  const navigationItemsDisplay = navigationItems?.map?.(( item, index) => {
+
+  const navigationItemsDisplay = navigationItems?.map?.((item, index) => {
     return (
       <CTypography
         color="var(--River-bed)"
@@ -20,7 +17,6 @@ export const FooterNavigation = ({navigationItems }) => {
         className="nav-items"
         key={index}
         id={index}
-       
         onMouseEnter={(e) => {
           setHoveredItem(e.target.id);
           setType("hover");
@@ -30,8 +26,12 @@ export const FooterNavigation = ({navigationItems }) => {
           setType("");
         }}
       >
-         <a href={item.href || item.to} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{item.label}</a>
-       
+        <a
+          href={item.href || item.to}
+          style={{ color: "var(--River-bed)", textDecoration: "none" }}
+        >
+          {item.label}
+        </a>
       </CTypography>
     );
   });

@@ -13,6 +13,7 @@ tags:
   - computing
 image: /img/blog/mining-mining-core-coin.png
 ---
+
 ![Mining Tutorial](/img/blog/mining-mining-core-coin.png "Mining Tutorial")
 
 If you have decided to participate in the Core Blockchain Network by mining Core Coins (XCB), but don’t exactly know how to start, you have come to the right place. In this article, we will teach you how to download and adjust the mining software.

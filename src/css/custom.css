@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /* You can override the default Infima variables here. */
 :root {
@@ -11,7 +11,8 @@
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 90%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: "Red Hat Display", "Open Sans", Helvetica, Arial, sans-serif;
+  --ifm-font-family-base: "Red Hat Display", "Open Sans", Helvetica, Arial,
+    sans-serif;
   --White: #fff;
   --White-10: rgba(16, 102, 223, 0);
   --River-bed: #4b5563;
@@ -24,7 +25,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
+[data-theme="dark"] {
   --ifm-color-primary: #46b549;
   --ifm-color-primary-dark: #3fa342;
   --ifm-color-primary-darker: #3b9a3e;
@@ -46,13 +47,13 @@
 
 .footer {
   color: "var(--River-bed)";
-  size : "small";
-  font-weight : "bold";
-  background-color: 'transparent'
+  size: "small";
+  font-weight: "bold";
+  background-color: "transparent";
 }
 
 a.header-github-link {
-  background-image: url('/img/github.svg');
+  background-image: url("/img/github.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -62,39 +63,38 @@ a.header-github-link {
   margin: 4px;
 }
 
-html[data-theme='dark'] a.header-github-link {
-  background-image: url('/img/github-light.svg');
+html[data-theme="dark"] a.header-github-link {
+  background-image: url("/img/github-light.svg");
 }
 
 a.header-github-link > svg {
   display: none;
 }
 
-.firstBlogPost{
+.firstBlogPost {
   display: flex;
   margin-bottom: 20px;
 }
 
-.secondBlogPost{
+.secondBlogPost {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 20px;
 }
 
-.markdown{
+.markdown {
   padding: 10px;
   flex: 1 0 70%;
 }
 
-
-.row .docusaurus-mt-lg{
+.row .docusaurus-mt-lg {
   display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 0;;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
 }
 
-.col .text--right .col--3{
+.col .text--right .col--3 {
   padding: 10px 0;
 }
 
@@ -102,4 +102,3 @@ a.header-github-link > svg {
   width: 100px;
   display: block;
 }
-

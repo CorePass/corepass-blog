@@ -4,7 +4,6 @@ import Icon from "../icon";
 import CloseIcon from "../../assets/icons/close-btn.svg";
 import { useWindowSize } from "@site/src/contexts/screen-size";
 
-
 import {
   StyledDialog,
   Wrapper,
@@ -15,8 +14,8 @@ import {
 
 export const CModal = ({ isOpen, onClose, children, title, ...props }) => {
   // detect if width is less than 768px
-  const  windowWidth  = useWindowSize();
-  const isMobile =  windowWidth < 992;
+  const windowWidth = useWindowSize();
+  const isMobile = windowWidth < 992;
 
   return (
     <StyledDialog
@@ -39,7 +38,9 @@ export const CModal = ({ isOpen, onClose, children, title, ...props }) => {
             {title ? <Title>{title}</Title> : <div />}
             {onClose ? (
               <IconButton onClick={() => onClose()}>
-                <Icon><CloseIcon /></Icon> 
+                <Icon>
+                  <CloseIcon />
+                </Icon>
               </IconButton>
             ) : (
               <></>

@@ -9,12 +9,7 @@ import {
   ROW_JUSTIFY_START__ALIGN_CENTER,
 } from "../styles/global-styles";
 
-import {
-  TEXT_11,
-  TEXT_40,
-  TEXT_56,
-  TEXT_64,
-} from "../styles/globalTypography";
+import { TEXT_11, TEXT_40, TEXT_56, TEXT_64 } from "../styles/globalTypography";
 import { breakpoints } from "../styles/media-queries";
 
 export const ModalContentStyled = styled("section")`

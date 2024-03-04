@@ -1,6 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
+import React from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
 
 function MaybeLink(props) {
   if (props.href) {
@@ -9,8 +9,8 @@ function MaybeLink(props) {
   return <>{props.children}</>;
 }
 
-export default function BlogPostItemHeaderAuthor({author, className}) {
-  const {name, title, url, imageURL, email} = author;
+export default function BlogPostItemHeaderAuthor({ author, className }) {
+  const { name, title, url, imageURL, email } = author;
 
   let link = url || (email && `mailto:${email}`) || undefined;
   let displayName = name;
@@ -30,14 +30,17 @@ export default function BlogPostItemHeaderAuthor({author, className}) {
 
   if (corepassMatchInside) {
     link = `corepass:${corepassMatchInside[1]}`;
-    const shortened = corepassMatchInside[1].slice(0, 4) + '…' + corepassMatchInside[1].slice(-4);
+    const shortened =
+      corepassMatchInside[1].slice(0, 4) +
+      "…" +
+      corepassMatchInside[1].slice(-4);
     displayName = name.replace(corepassPatternInside, `(${shortened}@cp)`);
   } else if (websiteMatch) {
     link = websiteMatch[1];
-    if (!link.includes(':')) {
-      link = 'https://' + link;
-      if (link.endsWith('.eth')) {
-        link += '.link';
+    if (!link.includes(":")) {
+      link = "https://" + link;
+      if (link.endsWith(".eth")) {
+        link += ".link";
       }
     }
   } else if (emailMatch) {
@@ -45,11 +48,11 @@ export default function BlogPostItemHeaderAuthor({author, className}) {
   } else if (githubMatch) {
     link = `https://github.com/${githubMatch[1]}`;
   } else if (podMatch) {
-    link = `https://${podMatch[1].split('@')[1]}/@${podMatch[1].split('@')[0]}`;
+    link = `https://${podMatch[1].split("@")[1]}/@${podMatch[1].split("@")[0]}`;
   }
 
   return (
-    <div className={clsx('avatar margin-bottom--sm', className)}>
+    <div className={clsx("avatar margin-bottom--sm", className)}>
       {imageURL && (
         <MaybeLink href={link} className="avatar__photo-link">
           <img
@@ -66,7 +69,8 @@ export default function BlogPostItemHeaderAuthor({author, className}) {
           className="avatar__intro"
           itemProp="author"
           itemScope
-          itemType="https://schema.org/Person">
+          itemType="https://schema.org/Person"
+        >
           <div className="avatar__name">
             <MaybeLink href={link} itemProp="url">
               <span itemProp="name">{displayName}</span>
@@ -77,7 +81,6 @@ export default function BlogPostItemHeaderAuthor({author, className}) {
               {title}
             </small>
           )}
-          
         </div>
       )}
     </div>

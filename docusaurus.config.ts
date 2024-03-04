@@ -1,6 +1,6 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 import fediverseUser from "remark-fediverse-user";
 import remarkCorepass from "remark-corepass";
@@ -9,114 +9,115 @@ import math from "remark-math";
 import katex from "rehype-katex";
 
 const config: Config = {
-  title: process.env.title || 'Blog',
-  tagline: process.env.tagline || 'A New Sense of Integrity',
-  favicon: '/img/favicon.png',
+  title: process.env.title || "Blog",
+  tagline: process.env.tagline || "A New Sense of Integrity",
+  favicon: "/img/favicon.png",
 
-  url: process.env.url || 'https://blog.coreblockchain.net',
-  baseUrl: '/',
+  url: process.env.url || "https://blog.coreblockchain.net",
+  baseUrl: "/",
 
   customFields: {
-    ican: 'cb57bbbb54cdf60fa666fd741be78f794d4608d67109',
-  },  
+    ican: "cb57bbbb54cdf60fa666fd741be78f794d4608d67109",
+  },
 
-  organizationName: process.env.org || 'Core Foundation',
-  projectName: 'corebc-blog',
+  organizationName: process.env.org || "Core Foundation",
+  projectName: "corebc-blog",
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   i18n: {
-    defaultLocale: 'en-US',
-    locales: ['en-US', 'de-DE', 'ja-JP', 'es-ES', 'pt-BR', 'zh-CN', 'sk-SK'],
+    defaultLocale: "en-US",
+    locales: ["en-US", "de-DE", "ja-JP", "es-ES", "pt-BR", "zh-CN", "sk-SK"],
     localeConfigs: {
-      'en-US': {
-        label: 'English (US)',
+      "en-US": {
+        label: "English (US)",
       },
-      'de-DE': {
-        label: 'Deutsch',
+      "de-DE": {
+        label: "Deutsch",
       },
-      'ja-JP': {
-        label: '日本語',
+      "ja-JP": {
+        label: "日本語",
       },
-      'es-ES': {
-        label: 'Español',
+      "es-ES": {
+        label: "Español",
       },
-      'pt-BR': {
-        label: 'Português (Brasil)',
+      "pt-BR": {
+        label: "Português (Brasil)",
       },
-      'zh-CN': {
-        label: '简体中文',
+      "zh-CN": {
+        label: "简体中文",
       },
-      'sk-SK': {
-        label: 'Slovenčina',
+      "sk-SK": {
+        label: "Slovenčina",
       },
     },
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: false,
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/core-coin/core-blog/tree/master/',
-          path: 'blog',
-          routeBasePath: '/',
+          editUrl: "https://github.com/core-coin/core-blog/tree/master/",
+          path: "blog",
+          routeBasePath: "/",
           blogSidebarCount: 0,
-          blogTitle: 'Blog news',
+          blogTitle: "Blog news",
           postsPerPage: 10,
           feedOptions: {
-            type: 'all',
-            copyright: `${process.env.org || 'Core Foundation'} ⛬ Copyright and related rights waived via CC0`,
+            type: "all",
+            copyright: `${process.env.org || "Core Foundation"} ⛬ Copyright and related rights waived via CC0`,
             createFeedItems: async (params) => {
-              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              const { blogPosts, defaultCreateFeedItems, ...rest } = params;
               return defaultCreateFeedItems({
                 blogPosts: blogPosts.filter((item, index) => index < 10),
                 ...rest,
               });
             },
           },
-          remarkPlugins: [
-            math,
-            fediverseUser,
-            remarkCorepass,
-            remarkCorebc,
-          ],
+          remarkPlugins: [math, fediverseUser, remarkCorepass, remarkCorebc],
           rehypePlugins: [
             [
               katex,
               {
-                output: 'mathml',
-                strict: 'newLineInDisplayMode',
+                output: "mathml",
+                strict: "newLineInDisplayMode",
               },
             ],
           ],
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    image: 'img/social-card.png',
+    image: "img/social-card.png",
     metadata: [
-      { name: 'description', content: 'A New Sense of Integrity' },
-      { property: 'og:title', content: 'Core Blog' },
-      { property: 'og:description', content: 'A New Sense of Integrity' },
-      { property: 'og:type', content: 'website' },
+      { name: "description", content: "A New Sense of Integrity" },
+      { property: "og:title", content: "Core Blog" },
+      { property: "og:description", content: "A New Sense of Integrity" },
+      { property: "og:type", content: "website" },
       {
         name: "keywords",
-        content: "core, blog, corecoin, core blockchain, core coin, core foundation, core foundation",
+        content:
+          "core, blog, corecoin, core blockchain, core coin, core foundation, core foundation",
       },
-      { property: 'ican:xcb', content: 'cb57bbbb54cdf60fa666fd741be78f794d4608d67109' },
-      { name: "theme-color", content: "#3b9a3e"},
-      { name: "apple-mobile-web-app-capable", content: "yes"},
-      { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent"},
+      {
+        property: "ican:xcb",
+        content: "cb57bbbb54cdf60fa666fd741be78f794d4608d67109",
+      },
+      { name: "theme-color", content: "#3b9a3e" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      {
+        name: "apple-mobile-web-app-status-bar-style",
+        content: "black-translucent",
+      },
     ],
     headTags: [
       {
@@ -134,101 +135,88 @@ const config: Config = {
         },
       },
       {
-        tagName: 'script',
+        tagName: "script",
         attributes: {
-          type: 'application/ld+json',
+          type: "application/ld+json",
         },
         innerHTML: JSON.stringify({
-          '@context': 'https://schema.org/',
-          '@type': 'Organization',
-          name: 'CORE FOUNDATION',
-          url: 'https://coreblockchain.net',
-          logo: 'https://blog.coreblockchain.net/img/logo.svg',
+          "@context": "https://schema.org/",
+          "@type": "Organization",
+          name: "CORE FOUNDATION",
+          url: "https://coreblockchain.net",
+          logo: "https://blog.coreblockchain.net/img/logo.svg",
         }),
       },
     ],
     colorMode: {
-      defaultMode: 'light',
+      defaultMode: "light",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    
+
     navbar: {
       hideOnScroll: true,
       items: [
         {
-          label: 'About Corepass',
-          href: 'https://docusaurus.io/docs/configuration',
-          className: 'nav-items'
-         
-          
+          label: "About Corepass",
+          href: "https://docusaurus.io/docs/configuration",
+          className: "nav-items",
         },
         {
-          label: 'Features',
-          to: '/core-nodes',
-          className: 'nav-items'
-         
-         
+          label: "Features",
+          to: "/core-nodes",
+          className: "nav-items",
         },
         {
-          label: 'Business',
-          to: '/',
-          className: 'nav-items'
+          label: "Business",
+          to: "/",
+          className: "nav-items",
         },
         {
-          label: 'Ecosystem',
-          to: '/',
-          className: 'nav-items'
+          label: "Ecosystem",
+          to: "/",
+          className: "nav-items",
         },
         {
-          label: 'Blog',
-          to: '/',
-          className: 'nav-items'
+          label: "Blog",
+          to: "/",
+          className: "nav-items",
         },
         {
-          label: 'Contact',
-          to: '/',
-          className: 'nav-items'
+          label: "Contact",
+          to: "/",
+          className: "nav-items",
         },
-        
       ],
-      
     },
     footer: {
-
-     
       links: [
-       
-            {
-              label: 'About CorePass',
-              href:"https://docusaurus.io/docs/configuration",
-              className: 'nav-items'
-            },
-            
-            {
-              label: 'Features',
-              to: '/core-nodes',
-              className: 'nav-items'
-            },
-            {
-              label: 'Business',
-              to: '/',
-              className: 'nav-items'
-            },
-            {
-              label: 'Ecosystem',
-              to: '/',
-              className: 'nav-items'
-            },
-            {
-              label: 'Contact',
-              to: '/archive',
-              className: 'nav-items'
-            },
-          
-          
-        
-      
+        {
+          label: "About CorePass",
+          href: "https://docusaurus.io/docs/configuration",
+          className: "nav-items",
+        },
+
+        {
+          label: "Features",
+          to: "/core-nodes",
+          className: "nav-items",
+        },
+        {
+          label: "Business",
+          to: "/",
+          className: "nav-items",
+        },
+        {
+          label: "Ecosystem",
+          to: "/",
+          className: "nav-items",
+        },
+        {
+          label: "Contact",
+          to: "/archive",
+          className: "nav-items",
+        },
       ],
     },
     prism: {
@@ -236,18 +224,16 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     algolia: {
-      appId: 'M0QDB2GLJF',
-      apiKey: '3f55dea7b27fe168448d76b9ec202f47',
-      indexName: 'coreblockchain',
+      appId: "M0QDB2GLJF",
+      apiKey: "3f55dea7b27fe168448d76b9ec202f47",
+      indexName: "coreblockchain",
       contextualSearch: true,
-      searchPagePath: 'search',
+      searchPagePath: "search",
       searchParameters: {
-        facetFilters: ['language:en'],
+        facetFilters: ["language:en"],
       },
     },
   } satisfies Preset.ThemeConfig,
 };
-
-
 
 export default config;

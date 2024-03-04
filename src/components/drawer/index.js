@@ -25,26 +25,26 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-
-
-
-
-export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, navigationItems }) => {
+export const CustomDrawer = ({
+  toggleDrawer,
+  setToggleDrawer,
+  sectionRef,
+  navigationItems,
+}) => {
   const [hoveredItem, setHoveredItem] = useState(null);
   const { setType } = useContext(CustomCursorContext);
   const { pathname } = useLocation();
 
-
   const onCloseHandler = () => {
     setToggleDrawer(false);
   };
- 
+
   const logoClickHandler = () => {
     setToggleDrawer(false);
     // executeScroll({ name: "Hero" });
   };
 
-  const navigationItemsDisplay = navigationItems?.map?.(( item, index ) => {
+  const navigationItemsDisplay = navigationItems?.map?.((item, index) => {
     return (
       <CTypography
         color="var(--River-bed)"
@@ -66,7 +66,12 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           setType("");
         }}
       >
-        <a href={item.href || item.to} style={{'color' : 'var(--River-bed)', 'textDecoration' : 'none'}}>{item.label}</a>
+        <a
+          href={item.href || item.to}
+          style={{ color: "var(--River-bed)", textDecoration: "none" }}
+        >
+          {item.label}
+        </a>
       </CTypography>
     );
   });
@@ -143,7 +148,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           }}
         >
           <a target="_blank" rel="noopener noreferrer" href={X_Link}>
-           <XIcon alt="XIcon" className="magnet-item" />
+            <XIcon alt="XIcon" className="magnet-item" />
           </a>
         </div>
         <div
@@ -156,10 +161,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           }}
         >
           <a target="_blank" rel="noopener noreferrer" href={Facebook_Link}>
-           <FacebookIcon
-              alt="FacebookIcon"
-              className="magnet-item"
-            />
+            <FacebookIcon alt="FacebookIcon" className="magnet-item" />
           </a>
         </div>
         <div
@@ -172,7 +174,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           }}
         >
           <a target="_blank" rel="noopener noreferrer" href={YouTube_Link}>
-           <YoutubeIcon alt="YoutubeIcon" className="magnet-item" />
+            <YoutubeIcon alt="YoutubeIcon" className="magnet-item" />
           </a>
         </div>
         <div
@@ -185,10 +187,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           }}
         >
           <a target="_blank" rel="noopener noreferrer" href={Instagram_Link}>
-            <InstagramIcon
-              alt="InstagramIcon"
-              className="magnet-item"
-            />
+            <InstagramIcon alt="InstagramIcon" className="magnet-item" />
           </a>
         </div>
         <div
@@ -201,10 +200,7 @@ export const CustomDrawer = ({ toggleDrawer, setToggleDrawer, sectionRef, naviga
           }}
         >
           <a target="_blank" rel="noopener noreferrer" href={Linkedin_Link}>
-            <LinkedinIcon
-              alt="LinkedinIcon"
-              className="magnet-item"
-            />
+            <LinkedinIcon alt="LinkedinIcon" className="magnet-item" />
           </a>
         </div>
       </StyledSocialSection>

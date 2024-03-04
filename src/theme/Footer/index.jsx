@@ -15,79 +15,66 @@ import {
   Linkedin_Link,
   X_Link,
   YouTube_Link,
- 
 } from "../../constants";
 import { useThemeConfig } from "@docusaurus/theme-common";
 
-
-
-
-
-export default function FooterWrapper( ) {
+export default function FooterWrapper() {
   const { setType } = useContext(CustomCursorContext);
-  const { links } = useThemeConfig().footer
-
+  const { links } = useThemeConfig().footer;
 
   return (
-    
-  <FooterStyled>
-       <div className="upper-section">
-     
-
-      <FooterLogo alt="FooterLogo" className="footer-logo" 
-      onMouseEnter={() => {
+    <FooterStyled>
+      <div className="upper-section">
+        <FooterLogo
+          alt="FooterLogo"
+          className="footer-logo"
+          onMouseEnter={() => {
             setType("hover");
           }}
           onMouseLeave={() => {
             setType("");
           }}
-      />
-         
-        
-         
+        />
 
-    <FooterNavigation navigationItems={links} />
+        <FooterNavigation navigationItems={links} />
 
-         
-
-      <div className="social-section">
-      <div className="magnet-container"  onMouseEnter={() => {
+        <div className="social-section">
+          <div
+            className="magnet-container"
+            onMouseEnter={() => {
               setType("hover");
             }}
             onMouseLeave={() => {
               setType("");
-            }}>
-               <a target="_blank" rel="noopener noreferrer" href={X_Link}>
+            }}
+          >
+            <a target="_blank" rel="noopener noreferrer" href={X_Link}>
               <XIcon alt="XIcon" className="magnet-item" />
             </a>
-            </div>
-      <div
-            className="magnet-container">
-               <a target="_blank" rel="noopener noreferrer" href={Facebook_Link}>
+          </div>
+          <div className="magnet-container">
+            <a target="_blank" rel="noopener noreferrer" href={Facebook_Link}>
               <FacebookIcon alt="FacebookIcon" className="magnet-item" />
             </a>
-            </div>
-      <div
-            className="magnet-container">
-               <a target="_blank" rel="noopener noreferrer" href={YouTube_Link}>
+          </div>
+          <div className="magnet-container">
+            <a target="_blank" rel="noopener noreferrer" href={YouTube_Link}>
               <YoutubeIcon alt="YoutubeIcon" className="magnet-item" />
             </a>
-        </div>
-        <div
-            className="magnet-container">
-               <a target="_blank" rel="noopener noreferrer" href={Instagram_Link}>
+          </div>
+          <div className="magnet-container">
+            <a target="_blank" rel="noopener noreferrer" href={Instagram_Link}>
               <InstagramIcon alt="InstagramIcon" className="magnet-item" />
             </a>
-        </div>
-        <div
-            className="magnet-container">
-               <a target="_blank" rel="noopener noreferrer" href={Linkedin_Link}>
+          </div>
+          <div className="magnet-container">
+            <a target="_blank" rel="noopener noreferrer" href={Linkedin_Link}>
               <LinkedinIcon alt="LinkedinIcon" className="magnet-item" />
             </a>
+          </div>
         </div>
       </div>
-      </div>
-      
+
       <div className="bottom-section">
         <div className="footer-copyright">
           <CTypography
@@ -98,18 +85,16 @@ export default function FooterWrapper( ) {
             © 2023 CorePass. All Rights Reserved.
           </CTypography>
         </div>
-        
+
         <div className="policy-condition-wrapper">
-        
           <CTypography
             weight="bold"
             color="var(--River-bed)"
             className="footer-text hoverable"
-           
           >
-           Privacy policy 
+            Privacy policy
           </CTypography>
-        
+
           <div className="vertical-line"></div>
           {/* <a
             target="_blank"
@@ -120,15 +105,12 @@ export default function FooterWrapper( ) {
             weight="bold"
             color="var(--River-bed)"
             className="footer-text hoverable"
-            
           >
             Terms and Conditions
           </CTypography>
           {/* </a> */}
         </div>
       </div>
-      
-      
- </FooterStyled>
-   );
+    </FooterStyled>
+  );
 }
