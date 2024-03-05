@@ -11,13 +11,13 @@ import { ModalProvider } from "@site/src/contexts/modal";
 import { useThemeConfig } from "@docusaurus/theme-common";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { ROUTENAMES } from "../../constants";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@docusaurus/router";
 
 export default function NavbarWrapper(sectionRef) {
   const [isOpen, setIsOpen] = useState(false);
   const { setType } = useContext(CustomCursorContext);
   const [toggleDrawer, setToggleDrawer] = useState(false);
-  const hideHeader = useRef(false);
+  const [hideHeader, setHideHeader] = useState(false);
   const { pathname } = useLocation();
 
   const { items } = useThemeConfig().navbar;
@@ -26,21 +26,35 @@ export default function NavbarWrapper(sectionRef) {
 
   const title = siteConfig.title;
 
-  (function hideOnScroll() {
+  useEffect(() => {
     let prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
+    const handleScroll = () => {
       let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+      if (prevScrollpos < currentScrollPos) {
+        const goalComponent = document.getElementById("secondItem");
+        const distanceToTop = goalComponent?.getBoundingClientRect()?.top;
+
+        if (distanceToTop < 0) {
+          setHideHeader(true);
+        } else {
+          setHideHeader(false);
+        }
       } else {
-        document.getElementById("navbar").style.top = "-150px";
+        const currScroll = window.pageYOffset;
+
+        currScroll < 0 ? setHideHeader(true) : setHideHeader(false);
       }
       prevScrollpos = currentScrollPos;
     };
-  })();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <HeaderStyled id="navbar">
+    <HeaderStyled id="navbar" hideHeader={hideHeader}>
       <ModalProvider isOpen={isOpen} setIsOpen={setIsOpen}></ModalProvider>
       <a href="/">
         <LogoIcon

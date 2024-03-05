@@ -14,17 +14,13 @@ export const HeaderStyled = styled("header")`
     !props.scrollingUp && props.hideHeader
       ? css`
           visibility: hidden;
-          transition:
-            visibility 0.3s linear,
-            opacity 0.3s linear;
+          transition: visibility 0.3s linear, opacity 0.3s linear;
           opacity: 0;
         `
       : css`
           visibility: visible;
           opacity: 1;
-          transition:
-            visibility 0.3s linear,
-            opacity 0.3s linear;
+          transition: visibility 0.3s linear, opacity 0.3s linear;
         `}
   ${STICKY_POSITION}
 
@@ -48,6 +44,7 @@ export const HeaderStyled = styled("header")`
     height: auto;
     width: 100%;
     padding: 24px 32px;
+    position: relative;
   }
   & .hamburger-menu {
     :hover {

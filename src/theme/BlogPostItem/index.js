@@ -6,18 +6,21 @@ let classIterator = 0;
 
 export default function BlogPostItemWrapper(props) {
   let nameOfClass;
+  let id;
 
   if (classIterator % 2 === 0) {
     nameOfClass = "firstBlogPost";
+    id = "firstItem";
   } else {
     nameOfClass = "secondBlogPost";
+    id = "secondItem";
   }
 
   classIterator++;
 
   return (
     <>
-      <div className={nameOfClass}>
+      <div className={nameOfClass} id={id}>
         <BlogPostItemContainer {...props} />
       </div>
     </>
