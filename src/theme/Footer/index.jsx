@@ -7,7 +7,7 @@ import FacebookIcon from "../../assets/icons/facebookIcon.svg";
 import FooterLogo from "../../assets/icons/Logo-footer.svg";
 import { FooterStyled } from "./footer-styled";
 import { FooterNavigation } from "./components/footer-nav";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
 import {
   Facebook_Link,
@@ -18,9 +18,20 @@ import {
 } from "../../constants";
 import { useThemeConfig } from "@docusaurus/theme-common";
 
+import { PrivacyPolicy } from "@site/src/privacy-policy";
+
 export default function FooterWrapper() {
   const { setType } = useContext(CustomCursorContext);
   const { links } = useThemeConfig().footer;
+
+  const [policy, setPolicy] = useState(false);
+
+  const handlePrivacyClick = () => {
+    setPolicy(!policy);
+    console.log(policy);
+
+    // window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <FooterStyled>
@@ -91,6 +102,13 @@ export default function FooterWrapper() {
             weight="bold"
             color="var(--River-bed)"
             className="footer-text hoverable"
+            onMouseEnter={() => {
+              setType("hover");
+            }}
+            onMouseLeave={() => {
+              setType("");
+            }}
+            onClick={handlePrivacyClick}
           >
             Privacy policy
           </CTypography>

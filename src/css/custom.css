@@ -102,3 +102,13 @@ a.header-github-link > svg {
   width: 100px;
   display: block;
 }
+
+
+
+@media (max-width: 800px){
+.col {
+    --ifm-col-width: 100%;
+    flex-basis: var(--ifm-col-width);
+   
+}
+}
