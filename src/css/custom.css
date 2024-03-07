@@ -112,3 +112,11 @@ a.header-github-link > svg {
    
 }
 }
+
+@media (max-width: 665px){
+  .markdown {
+    flex: 2 1 100%;
+  }
+  
+  }
+
