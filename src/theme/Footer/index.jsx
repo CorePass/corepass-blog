@@ -19,6 +19,8 @@ import {
 import { useThemeConfig } from "@docusaurus/theme-common";
 
 import { PrivacyPolicy } from "@site/src/privacy-policy";
+import { Redirect } from "@docusaurus/router";
+import Link from "@docusaurus/Link";
 
 export default function FooterWrapper() {
   const { setType } = useContext(CustomCursorContext);
@@ -28,8 +30,8 @@ export default function FooterWrapper() {
 
   const handlePrivacyClick = () => {
     setPolicy(!policy);
-    console.log(policy);
-
+    console.log(24);
+    return;
     // window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -110,7 +112,12 @@ export default function FooterWrapper() {
             }}
             onClick={handlePrivacyClick}
           >
-            Privacy policy
+            <a
+              href="http://localhost:3000/hello"
+              style={{ color: "var(--River-bed)", textDecoration: "none" }}
+            >
+              Privacy policy
+            </a>
           </CTypography>
 
           <div className="vertical-line"></div>

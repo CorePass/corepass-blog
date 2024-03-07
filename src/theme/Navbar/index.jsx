@@ -31,7 +31,13 @@ export default function NavbarWrapper(sectionRef) {
     const handleScroll = () => {
       let currentScrollPos = window.pageYOffset;
       if (prevScrollpos < currentScrollPos) {
-        const goalComponent = document.getElementById("secondItem");
+        let goalComponent;
+        if (document.getElementById("secondItem")) {
+          goalComponent = document.getElementById("secondItem");
+        } else {
+          let mainDiv = document.getElementById("__blog-post-container");
+          goalComponent = mainDiv.children[1];
+        }
         const distanceToTop = goalComponent?.getBoundingClientRect()?.top;
 
         if (distanceToTop < 0) {

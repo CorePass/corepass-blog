@@ -59,6 +59,8 @@ const config: Config = {
       "classic",
       {
         docs: false,
+    
+  
         blog: {
           showReadingTime: true,
           editUrl: "https://github.com/core-coin/core-blog/tree/master/",
@@ -94,6 +96,7 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+
   ],
 
   themeConfig: {
