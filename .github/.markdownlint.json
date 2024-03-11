@@ -16,15 +16,7 @@
   "MD031": false,
   "MD032": false,
   "MD033": {
-    "allowed_elements": [
-      "a",
-      "kbd",
-      "dl",
-      "dt",
-      "dd",
-      "sub",
-      "sup"
-    ]
+    "allowed_elements": ["a", "kbd", "dl", "dt", "dd", "sub", "sup"]
   },
   "MD034": false,
   "MD035": {

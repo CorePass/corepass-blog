@@ -1,6 +1,7 @@
 ---
 title: Core Blockchain Outruns Competition, Bringing Web 4.0 and DeFi 2.0 via CoDeTech
 author: CCnews24
+
 date: 2022-08-24
 lang: en-US
 categories:
@@ -12,6 +13,7 @@ tags:
   - defi2
 image: /img/blog/core-blockchain-web4-core-blockchain-defi.png
 ---
+
 ![Core Blockchain Web 4.0](/img/blog/core-blockchain-web4-core-blockchain-defi.png "Core Blockchain Web 4.0")
 
 > The recently released Core Blockchain represents the next step in this area of tech.

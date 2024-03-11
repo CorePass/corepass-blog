@@ -12,6 +12,7 @@ tags:
   - units
 image: /img/blog/denomination-units.png
 ---
+
 ![Denomination Units](/img/blog/denomination-units.png "Denomination Units")
 
 Anyone who ever held money in their hands will know that dollars break into cents, pounds break into pennies, and yens break into sens. However, did you know, that cryptocurrencies break into smaller units, too? And usually, it is several of them.
@@ -36,23 +37,23 @@ The units that follow each represent a further shift in three decimal places. Th
 
 You can find further details, such as aliases, symbols, or values in the following chart:
 
-| Name | Alias | Unit | Symbol | SI | Value |
-|---|---|---|---|---|---|
-| Ore | Ore | ø | 🔷 | ["atto","a"] | 1E+00 |
-| Wav | Fecore |  | 〰️ | ["femto","f"] | 1E+03 |
-| Grav | Picore |  | ➰ | ["pico","p"] | 1E+06 |
-| Nucle | Nacore | ꞥ | ✴️ | ["nano","n"] | 1E+09 |
-| Atom | μcore |  | ⚛️ | ["micro","μ"] | 1E+12 |
-| Moli | Micore | ₥ | ❇️ | ["mili","m"] | 1E+15 |
-| Core | Core | ₡ | 🟢️️   |  | 1E+18 |
-| Aer | Kicore | ₳ | 🌀️  | ["kilo","k"] | 1E+21 |
-| Orb | Mecore |  | ☄️ | ["mega","M"] | 1E+24 |
-| Plano | Gicore | Ᵽ | 🪐️  | ["giga","G"] | 1E+27 |
-| Tera | Tecore |  | 🌐️  | ["tera","T"] | 1E+30 |
-| Sola | Precore |  | 💫️  | ["peta","P"] | 1E+33 |
-| Galx | Excore | Ǥ | ✨️ | ["exa","E"] | 1E+36 |
-| Cluster | Zecore |  | 💠️  | ["zetta","Z"] | 1E+39 |
-| Supermatter | Yocore | ₷ | 🔱 | ["yotta","Y"] | 1E+42 |
+| Name        | Alias   | Unit | Symbol | SI            | Value |
+| ----------- | ------- | ---- | ------ | ------------- | ----- |
+| Ore         | Ore     | ø    | 🔷     | ["atto","a"]  | 1E+00 |
+| Wav         | Fecore  |      | 〰️     | ["femto","f"] | 1E+03 |
+| Grav        | Picore  |      | ➰     | ["pico","p"]  | 1E+06 |
+| Nucle       | Nacore  | ꞥ    | ✴️     | ["nano","n"]  | 1E+09 |
+| Atom        | μcore   |      | ⚛️     | ["micro","μ"] | 1E+12 |
+| Moli        | Micore  | ₥    | ❇️     | ["mili","m"]  | 1E+15 |
+| Core        | Core    | ₡    | 🟢️️   |               | 1E+18 |
+| Aer         | Kicore  | ₳    | 🌀️    | ["kilo","k"]  | 1E+21 |
+| Orb         | Mecore  |      | ☄️     | ["mega","M"]  | 1E+24 |
+| Plano       | Gicore  | Ᵽ    | 🪐️    | ["giga","G"]  | 1E+27 |
+| Tera        | Tecore  |      | 🌐️    | ["tera","T"]  | 1E+30 |
+| Sola        | Precore |      | 💫️    | ["peta","P"]  | 1E+33 |
+| Galx        | Excore  | Ǥ    | ✨️    | ["exa","E"]   | 1E+36 |
+| Cluster     | Zecore  |      | 💠️    | ["zetta","Z"] | 1E+39 |
+| Supermatter | Yocore  | ₷    | 🔱     | ["yotta","Y"] | 1E+42 |
 
 ## Further Economic Description of XCB’s Subunits
 

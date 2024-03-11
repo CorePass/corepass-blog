@@ -12,6 +12,7 @@ tags:
   - hodler
 image: /img/blog/xcb-hodler.png
 ---
+
 ![XCB HODLER App](/img/blog/xcb-hodler.png "XCB HODLER App")
 
 Read through the ABCs of the XCB HODLER app and what differentiates it from other crypto wallets.
@@ -21,15 +22,15 @@ When engaging with our application, designed as an interface for importing Core 
 <!--truncate-->
 
 1. Decentralized Operation & No Data Storage on Our Servers
-  What it means: Our app operates without relying on a centralized system, meaning we neither store nor track your data on any platform – be it our servers or external databases. It's as if every user has their own individual, impenetrable room.
+   What it means: Our app operates without relying on a centralized system, meaning we neither store nor track your data on any platform – be it our servers or external databases. It's as if every user has their own individual, impenetrable room.
 1. Code Obfuscation
-  What it means: Any attempts to replicate or counterfeit our app would hit a wall due to our "scrambled" code. It's akin to trying to reverse-engineer a gourmet dish without knowing any of its secret ingredients.
+   What it means: Any attempts to replicate or counterfeit our app would hit a wall due to our "scrambled" code. It's akin to trying to reverse-engineer a gourmet dish without knowing any of its secret ingredients.
 1. Download Source Checks
-  What it means: We make sure that the app that you are using was published by us and not by mean actors.
+   What it means: We make sure that the app that you are using was published by us and not by mean actors.
 1. Safety Measures Against Unwanted Access
-  What it means: Our app is akin to a top-tier security facility. Intruders trying to infiltrate the app's inner workings or using questionable devices are promptly denied access. Imagine a bank vault that demands stringent authentication.
+   What it means: Our app is akin to a top-tier security facility. Intruders trying to infiltrate the app's inner workings or using questionable devices are promptly denied access. Imagine a bank vault that demands stringent authentication.
 1. Data Encryption & Secure Storage
-  What it means: Information stored on your device undergoes encryption and is secured using the most advanced storage mechanisms. We utilize device-centric securities like KeyChain for iPhones and KeyStore for Android. It's like entrusting a prized possession to the world's most secure vault.
+   What it means: Information stored on your device undergoes encryption and is secured using the most advanced storage mechanisms. We utilize device-centric securities like KeyChain for iPhones and KeyStore for Android. It's like entrusting a prized possession to the world's most secure vault.
 
 ## The App’s Essential Role
 

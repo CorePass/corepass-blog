@@ -11,10 +11,11 @@ tags:
   - mainnet
 image: /img/blog/mainnet-is-live.png
 ---
+
 ![Mainnet is Live](/img/blog/mainnet-is-live.png "Mainnet is Live")
 
 > It always seems impossible until it's done.
-— Nelson Mandela
+> — Nelson Mandela
 
 The year is 2014, the world realizes that combating climate change is inevitable, Scotland votes to stay in the UK, the first-ever probe lands on a comet, Vitalik Buterin announces Ethereum at the Bitcoin conference in Miami, and a trio of visionaries meets for the first time to conceptualize what would ultimately become the biggest breakthrough in the field of decentralized technology.
 
@@ -144,7 +145,7 @@ That is why we have created a reward system for those who discover a bug. The re
 We calculate rewards according to the OWASP risk rating model based on Impact and Likelihood.
 
 | **Impact**   | **Severity**    | **Severity**    | **Severity**    |
-|--------------|-----------------|-----------------|-----------------|
+| ------------ | --------------- | --------------- | --------------- |
 | **High**     | Moderate //S3// | High //S4//     | Critical //S5// |
 | **Moderate** | Low //S2//      | Moderate //S3// | High //S4//     |
 | **Low**      | Note //S1//     | Low //S2//      | Moderate //S3// |
