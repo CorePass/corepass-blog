@@ -13,14 +13,11 @@ import CTypography from "@site/src/components/typography";
 import { Navigation } from "../components/navigation";
 import { HeaderStyled, HideAbleBaseButton } from "../styled-header";
 import HamburgerMenu from "../../../assets/icons/hamburger-menu.svg";
-import { useContext, useState, useRef, useEffect } from "react";
+import { useContext, useState } from "react";
 import LogoIcon from "../../../assets/icons/Logo-header.svg";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
 import { CustomDrawer } from "@site/src/components/drawer";
 import { ModalProvider } from "@site/src/contexts/modal";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-// import { ROUTENAMES } from "../../constants";
-import { useLocation } from "@docusaurus/router";
 
 function NavbarBackdrop(props) {
   return (
@@ -35,8 +32,6 @@ export default function NavbarLayout(sectionRef) {
   const [isOpen, setIsOpen] = useState(false);
   const { setType } = useContext(CustomCursorContext);
   const [toggleDrawer, setToggleDrawer] = useState(false);
-  const [hideHeader, setHideHeader] = useState(false);
-  const { pathname } = useLocation();
 
   const { items, logo } = useThemeConfig().navbar;
 
@@ -67,7 +62,7 @@ export default function NavbarLayout(sectionRef) {
         }
       )}
     >
-      <HeaderStyled id="navbar" hideHeader={hideHeader}>
+      <HeaderStyled id="navbar">
         <ModalProvider isOpen={isOpen} setIsOpen={setIsOpen}></ModalProvider>
         <a href={logo.href}>
           <LogoIcon

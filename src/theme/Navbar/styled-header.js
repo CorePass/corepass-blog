@@ -1,8 +1,5 @@
-import { css, styled } from "@mui/material";
-import {
-  ROW_ALIGN_CENTER__SPACE_B,
-  STICKY_POSITION,
-} from "../../styles/global-styles";
+import { styled } from "@mui/material";
+import { ROW_ALIGN_CENTER__SPACE_B } from "../../styles/global-styles";
 import { breakpoints } from "../../styles/media-queries";
 import { CBaseButton } from "@site/src/components/button/base";
 
@@ -10,23 +7,7 @@ export const HeaderStyled = styled("header")`
   ${ROW_ALIGN_CENTER__SPACE_B};
   min-width: 320px;
   padding: 16px 48px;
-  ${(props) =>
-    !props.scrollingUp && props.hideHeader
-      ? css`
-          visibility: hidden;
-          transition: visibility 0.3s linear, opacity 0.3s linear;
-          opacity: 0;
-        `
-      : css`
-          visibility: visible;
-          opacity: 1;
-          transition: visibility 0.3s linear, opacity 0.3s linear;
-        `}
-  ${STICKY_POSITION}
 
-  top: 0;
-  background-color: var(--White);
-  z-index: 300;
   background: ${(props) =>
     props.screenBegining ? "transparent" : "rgba(255, 255, 255, 0.5)"};
   backdrop-filter: ${(props) =>

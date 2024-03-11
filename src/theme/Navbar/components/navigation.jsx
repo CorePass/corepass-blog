@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import CTypography from "@site/src/components/typography";
 import { NavigationStyled } from "./navigation-styled";
 import { CustomCursorContext } from "@site/src/contexts/cursor";
-import { Link } from "react-router-dom";
 
 export const Navigation = ({ navigationItems }) => {
   const [hoveredItem, setHoveredItem] = useState(null);
