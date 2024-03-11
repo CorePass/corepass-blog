@@ -24,7 +24,7 @@ import Link from "@docusaurus/Link";
 
 export default function FooterWrapper() {
   const { setType } = useContext(CustomCursorContext);
-  const { links } = useThemeConfig().footer;
+  const { links, logo } = useThemeConfig().footer;
 
   const [policy, setPolicy] = useState(false);
 
@@ -38,16 +38,18 @@ export default function FooterWrapper() {
   return (
     <FooterStyled>
       <div className="upper-section">
-        <FooterLogo
-          alt="FooterLogo"
-          className="footer-logo"
-          onMouseEnter={() => {
-            setType("hover");
-          }}
-          onMouseLeave={() => {
-            setType("");
-          }}
-        />
+        <a href={logo.href}>
+          <FooterLogo
+            alt={logo.alt}
+            className="footer-logo"
+            onMouseEnter={() => {
+              setType("hover");
+            }}
+            onMouseLeave={() => {
+              setType("");
+            }}
+          />
+        </a>
 
         <FooterNavigation navigationItems={links} />
 

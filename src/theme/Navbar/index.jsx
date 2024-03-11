@@ -20,11 +20,7 @@ export default function NavbarWrapper(sectionRef) {
   const [hideHeader, setHideHeader] = useState(false);
   const { pathname } = useLocation();
 
-  const { items } = useThemeConfig().navbar;
-
-  const { siteConfig } = useDocusaurusContext();
-
-  const title = siteConfig.title;
+  const { items, logo } = useThemeConfig().navbar;
 
   useEffect(() => {
     let prevScrollpos = window.pageYOffset;
@@ -62,9 +58,9 @@ export default function NavbarWrapper(sectionRef) {
   return (
     <HeaderStyled id="navbar" hideHeader={hideHeader}>
       <ModalProvider isOpen={isOpen} setIsOpen={setIsOpen}></ModalProvider>
-      <a href="/">
+      <a href={logo.href}>
         <LogoIcon
-          alt={title}
+          alt={logo.alt}
           className="logo-header header-entrance-anime"
           onMouseEnter={() => {
             setType("hover");

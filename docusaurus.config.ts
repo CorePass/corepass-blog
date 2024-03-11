@@ -159,6 +159,12 @@ const config: Config = {
 
     navbar: {
       hideOnScroll: true,
+      logo: {
+        alt: 'NavbarLogo',
+        src: '/',
+        href: '/',
+        
+      },
       items: [
         {
           label: "About Corepass",
@@ -193,6 +199,12 @@ const config: Config = {
       ],
     },
     footer: {
+      logo: {
+        alt: 'FooterLogo',
+        src: '/',
+        href: '/',
+        
+      },
       links: [
         {
           label: "About CorePass",
