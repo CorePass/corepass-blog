@@ -45,12 +45,15 @@
   letter-spacing: 0.1em;
 }
 
+
+
 .footer {
   color: "var(--River-bed)";
   size: "small";
   font-weight: "bold";
   background-color: "transparent";
 }
+
 
 a.header-github-link {
   background-image: url("/img/github.svg");
@@ -105,6 +108,19 @@ a.header-github-link > svg {
 
 
 
+
+.navbar{
+  display: block;
+}
+
+.css-6eoo8r{
+  padding: 0;
+}
+
+
+  
+
+
 @media (max-width: 800px){
 .col {
     --ifm-col-width: 100%;
@@ -117,6 +133,14 @@ a.header-github-link > svg {
   .markdown {
     flex: 2 1 100%;
   }
-  
+
   }
 
+  @media (max-width: 500px){
+
+    #navbar  {
+      padding: 15px 0;
+    }
+      }
+  
+  
